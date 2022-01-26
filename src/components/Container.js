@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
+import { render } from 'react-dom';
 import Footer from './Footer';
 import NavBar from './NavBar';
 
@@ -21,10 +22,14 @@ export default function Container() {
   const handlePageChange = (page) => setCurrentPage(page);
 
   return (
-    <NavBar>
-    <div>
-
-    </div>
-    </NavBar>
-  )
+    <Fragment>
+      <NavBar currentPage={currentPage} handlePageChange={handlePageChange} />
+      <div>
+        {renderPage()}
+      </div>
+      <Footer />
+    </Fragment>
+  );
 }
+
+export default Container
