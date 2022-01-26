@@ -18,3 +18,5 @@ function Navigation ({ currentPage, handlePageChange }) {
     </ul>
   )
 }
+
+export default Navigation;

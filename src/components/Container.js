@@ -1,5 +1,8 @@
-import React, { Fragment, useState } from 'react';
-import Footer from './Footer';
+import React, { useState } from 'react';
+import Home from './Pages/Home';
+import About from './Pages/About';
+import Portfolio from './Pages/Portfolio';
+import Contact from './Pages/Contact';
 import NavBar from './NavBar';
 
 export default function Container() {
@@ -12,23 +15,21 @@ export default function Container() {
       case 'About':
         return <About />;
       case 'Projects':
-        return <Projects />;
+        return <Portfolio />;
       case 'Contact':
         return <Contact />;
+        default:
     }
   };
 
   const handlePageChange = (page) => setCurrentPage(page);
 
   return (
-    <Fragment>
-      <NavBar currentPage={currentPage} handlePageChange={handlePageChange} />
       <div>
+        {}
+        <NavBar currentPage={currentPage} handlePageChange={handlePageChange} />
+        {}
         {renderPage()}
       </div>
-      <Footer />
-    </Fragment>
   );
 }
-
-export default Container
