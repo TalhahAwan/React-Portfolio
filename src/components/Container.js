@@ -1,5 +1,4 @@
 import React, { Fragment, useState } from 'react';
-import { render } from 'react-dom';
 import Footer from './Footer';
 import NavBar from './NavBar';
 
